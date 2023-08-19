@@ -4,7 +4,7 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    display: flex;
+    display: flex; /* Flexbox: Distribuye los hijos del body (header, main, footer) en una dirección de columna. */
     flex-direction: column;
     min-height: 100vh;
 }
@@ -21,9 +21,9 @@ nav ul {
     padding: 0;
     margin: 0;
     list-style-type: none;
-    display: flex;
-    justify-content: center; 
-    gap: 20px; 
+    display: flex; /* Flexbox: Distribuye los items de la lista horizontalmente. */
+    justify-content: center;
+    gap: 20px;
 }
 
 nav li {
@@ -35,22 +35,22 @@ nav a {
     text-decoration: none;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: rgba(0, 0, 0, 0.2); 
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 footer {
-    padding: 20px; 
+    padding: 20px;
 }
 
 footer nav ul {
-    display: flex; 
-    flex-direction: column; 
-    align-items: flex-end; 
-    gap: 5px; 
+    display: flex; /* Flexbox: Permite manejar la dirección y alineación de los items de la lista. */
+    flex-direction: column; /* Los elementos se apilan verticalmente. */
+    align-items: flex-end;
+    gap: 5px;
 }
 
 main {
@@ -59,38 +59,35 @@ main {
 
 .jumbotron {
     background-color: #F5A31A;
-    display: flex;
-    align-items: center; 
-    gap: 20px; 
+    display: flex; /* Flexbox: Distribuye imagen y texto uno al lado del otro en una fila. */
+    align-items: center;
+    gap: 20px;
 }
 
 .jumbotron img {
-    width: 50%; 
+    width: 50%;
     padding: 10px;
 }
 
 .jumbotron-text h2 {
     color: #EDF4F2;
     text-shadow: 1px 1px 2px black;
-    margin: 0; 
+    margin: 0;
 }
 
 .jumbotron-text p {
     color: #EDF4F2;
     text-shadow: 1px 1px 2px black;
-    margin: 10px 0 0 0; 
-    font-size: 0.9em; 
+    margin: 10px 0 0 0;
+    font-size: 0.9em;
 }
-
-
-
 
 .registration {
     background-color: #f7f7f7;
     padding: 20px 0;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    display: flex; /* Flexbox: Centra el contenido del formulario en el centro del contenedor. */
+    flex-direction: column; /* Los elementos se apilan verticalmente. */
     align-items: center;
     justify-content: center;
 }
@@ -98,33 +95,32 @@ main {
 .registration form {
     max-width: 300px;
     width: 100%;
-    display: flex;
+    display: flex; /* Flexbox: Organiza los elementos del formulario en una pila vertical. */
     flex-direction: column;
     gap: 10px;
 }
 
 .catalogue {
     padding: 20px 0;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    display: grid; /* CSS Grid: Organiza los productos en una cuadrícula responsive. */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Se define un número flexible de columnas según el ancho disponible. */
     gap: 20px;
     justify-items: center;
-    align-items: center; 
+    align-items: center;
 }
 
 .product {
-    display: flex;
+    display: flex; /* Flexbox: Alinea el contenido del producto en una pila vertical centrada. */
     flex-direction: column;
     align-items: center;
-    text-align: center; 
+    text-align: center;
 }
 
 .product a {
-    text-decoration: none; 
-    color: inherit; 
-    display: block; 
+    text-decoration: none;
+    color: inherit;
+    display: block;
 }
-
 
 .product img {
     width: 80%;
@@ -138,24 +134,18 @@ main {
 
 @media only screen and (max-width: 600px) {
     .jumbotron {
-        flex-direction: column;
+        flex-direction: column; /* Flexbox: Cambia la dirección para apilar la imagen y el texto verticalmente. */
     }
-
     .jumbotron img {
-        width: 90%;  
-        max-width: 90%;  
-        margin: 0 auto;  
-        display: block;  
+        width: 90%;
+        max-width: 90%;
+        margin: 0 auto;
+        display: block;
     }
-
     .jumbotron-text {
         text-align: center;
     }
-
     .catalogue {
         grid-template-columns: 1fr;
     }
 }
-
-
-
